@@ -18,7 +18,7 @@ after_success:
    #Login to the docker CLI; first make sure to create the env variables in Travis-CI
    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
    # Take the docker build images and push them to docker hub
-   - docker push swintonp/multi-client
-   - docker push swintonp/multi-nginx
-   - docker push swintonp/multi-server
-   - docker push swintonp/multi-worker
+   - docker push swintonp/multi-container:multi-client
+   - docker push swintonp/multi-container:multi-nginx
+   - docker push swintonp/multi-container:multi-server
+   - docker push swintonp/multi-container:multi-worker
